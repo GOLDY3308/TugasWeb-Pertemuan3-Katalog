@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gdy Roastery - Katalog Biji Kopi</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    :root {
+      --warna-bg: #fdf8f5;     
+      --warna-primer: #4a3b32; 
+      --warna-aksen: #d4a373;  
+      --warna-kartu: #ffffff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--warna-bg);
+      color: var(--warna-primer);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+    }
+
+    section {
+      scroll-margin-top: 90px;
+    }
+
+    .judul-utama {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      color: var(--warna-primer);
+      letter-spacing: -1px;
+    }
+    
+    .judul-section {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 700;
+      color: var(--warna-primer);
+    }
+
+    .teks-harga {
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      color: var(--warna-aksen);
+    }
+
+    .navbar-kustom {
+      background-color: var(--warna-primer);
+    }
+    
+    .kartu-kustom {
+      border: none;
+      border-radius: 16px;
+      background-color: var(--warna-kartu);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .kartu-kustom:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(74, 59, 50, 0.15) !important;
+    }
+
+    .gambar-kartu {
+      border-radius: 16px 16px 0 0;
+      object-fit: cover;
+      height: 200px;
+    }
+
+    .tombol-kustom {
+      background-color: var(--warna-aksen);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 0.5rem 1.5rem;
+      font-weight: 600;
+      transition: background-color 0.2s;
+    }
+
+    .tombol-kustom:hover {
+      background-color: var(--warna-primer);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-kustom shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-4" href="#">Gdy Roastery.</a>
+      <!-- Target collapse diubah menjadi kebab-case: nav-menu-utama -->
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu-utama">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="nav-menu-utama">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#area-beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#area-koleksi">Koleksi Biji Kopi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#area-tentang">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="#area-hubungi">Hubungi Kami</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="area-beranda" class="container py-5 mt-4">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
+        <h1 class="judul-utama mb-3">Seni Menyangrai Biji Kopi Pilihan.</h1>
+        <p class="text-muted fs-5 mb-4">Selamat datang di <strong>Gdy Roastery</strong>. Kami mendedikasikan waktu dan ketelitian untuk mengekstrak potensi terbaik dari setiap biji kopi. Temukan profil sangrai favoritmu dan nikmati secangkir kesempurnaan setiap harinya.</p>
+        <a href="#area-koleksi" class="btn tombol-kustom btn-lg">Lihat Koleksi</a>
+      </div>
+      <div class="col-lg-6">
+        <img src="https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gdy Roastery" class="img-fluid rounded-4 shadow">
+      </div>
+    </div>
+  </section>
+
+  <section id="area-koleksi" class="container py-5 mt-5">
+    <div class="text-center mb-5">
+      <h2 class="judul-section">Koleksi Biji Kopi</h2>
+      <p class="text-muted fs-5">Hasil sangrai terbaik minggu ini, siap diseduh.</p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="wadah-produk">
+      <!-- 12 item kartu akan disuntikkan secara otomatis oleh JavaScript -->
+    </div>
+  </section>
+
+  <section id="area-tentang" class="container py-5 mt-5">
+    <div class="bg-white p-5 rounded-4 shadow-sm text-center">
+      <h2 class="judul-section mb-4">Tentang Gdy Roastery</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <p class="text-muted fs-5 text-start text-md-center">
+            Berawal dari kecintaan terhadap aroma kopi di pagi hari, <strong>Gdy Roastery</strong> hadir untuk menjembatani petani kopi lokal dengan para penikmat kopi sejati. Proses *roasting* (penyangraian) kami dilakukan dalam kelompok kecil (*small batch*) untuk memastikan kontrol kualitas yang ketat, sehingga *notes* rasa unik dari setiap daerah penghasil kopi dapat keluar dengan maksimal.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="area-hubungi" class="container py-5 mt-5 mb-5">
+    <div class="text-center mb-5">
+      <h2 class="judul-section">Hubungi Kami</h2>
+      <p class="text-muted fs-5">Punya pertanyaan seputar racikan atau pesanan partai besar? Sapa kami.</p>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card kartu-kustom p-4 shadow-sm">
+          <form>
+            <div class="row mb-3">
+              <!-- ID dan For menggunakan kebab-case -->
+              <div class="col-md-6 mb-3 mb-md-0">
+                <label for="input-nama" class="form-label fw-semibold">Nama Lengkap</label>
+                <input type="text" class="form-control bg-light border-0" id="input-nama" placeholder="Masukkan nama Anda">
+              </div>
+              <div class="col-md-6">
+                <label for="input-email" class="form-label fw-semibold">Alamat Email</label>
+                <input type="email" class="form-control bg-light border-0" id="input-email" placeholder="nama@email.com">
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="input-pesan" class="form-label fw-semibold">Pesan Anda</label>
+              <textarea class="form-control bg-light border-0" id="input-pesan" rows="4" placeholder="Tuliskan pertanyaan atau kebutuhan Anda di sini..."></textarea>
+            </div>
+            <div class="text-end">
+              <button type="submit" class="btn tombol-kustom px-5">Kirim Pesan</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="navbar-kustom text-white py-5">
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <h4 class="fw-bold mb-3">Gdy Roastery.</h4>
+          <p class="text-white-50 small mb-1">Menyangrai kopi dengan hati.</p>
+          <p class="text-white-50 small">Berbasis di Medan, Indonesia.</p>
+        </div>
+        <div class="col-md-6 text-md-end align-self-end">
+          <p class="mb-0 small text-white-50">&copy; 2026 Gdy Roastery Catalog. Tugas Pemrograman Web.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const wadahProduk = document.getElementById('wadah-produk');
+    let kumpulanKartu = '';
+
+    const variasiNama = [
+      "Arabica Mandailing", 
+      "Robusta Sidikalang", 
+      "Arabica Gayo", 
+      "House Blend Espresso",
+      "Liberica Peaberry"
+    ];
+    
+    const variasiDeskripsi = [
+      "Biji kopi Arabica dengan notes dark chocolate dan rempah, di-roast medium-dark.",
+      "Karakter rasa yang tebal dan bold, sangat cocok untuk racikan kopi susu.",
+      "Keasaman yang seimbang dengan aroma floral dan sedikit sentuhan rasa buah tropis.",
+      "Campuran rahasia 70% Arabica dan 30% Robusta untuk hasil crema espresso yang sempurna.",
+      "Biji kopi langka dengan aroma nangka yang khas dan aftertaste yang panjang."
+    ];
+
+    for(let i = 0; i < 12; i++) {
+      const namaProduk = variasiNama[i % variasiNama.length];
+      const deskripsi = variasiDeskripsi[i % variasiDeskripsi.length];
+      
+      const urlGambar = `https://picsum.photos/seed/bijikopi${i}/400/300`;
+      const harga = 75 + (i * 5);
+      
+      kumpulanKartu += `
+        <div class="col">
+          <div class="card h-100 kartu-kustom shadow-sm">
+            <img src="${urlGambar}" class="card-img-top w-100 gambar-kartu" alt="${namaProduk}">
+            <div class="card-body d-flex flex-column p-4">
+              <h5 class="card-title fw-bold">${namaProduk}</h5>
+              <p class="card-text text-muted small mb-4">${deskripsi}</p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <span class="fw-bold teks-harga">Rp ${harga}.000</span>
+                <button class="btn tombol-kustom">Pilih Biji</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    wadahProduk.innerHTML = kumpulanKartu;
+  </script>
+</body>
+</html>
