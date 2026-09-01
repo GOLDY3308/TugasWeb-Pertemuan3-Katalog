@@ -203,7 +203,14 @@
       "Robusta Sidikalang", 
       "Arabica Gayo", 
       "House Blend Espresso",
-      "Liberica Peaberry"
+      "Liberica Peaberry",
+      "Arabica Bali Kintamani",
+      "Arabica Flores Bajawa",
+      "Arabica Papua Wamena",
+      "Arabica Java Preanger",
+      "Arabica Sumatra Lintong",
+      "Robusta Temanggung",
+      "Arabica Toraja Kalosi"
     ];
     
     const variasiDeskripsi = [
@@ -211,14 +218,36 @@
       "Karakter rasa yang tebal dan bold, sangat cocok untuk racikan kopi susu.",
       "Keasaman yang seimbang dengan aroma floral dan sedikit sentuhan rasa buah tropis.",
       "Campuran rahasia 70% Arabica dan 30% Robusta untuk hasil crema espresso yang sempurna.",
-      "Biji kopi langka dengan aroma nangka yang khas dan aftertaste yang panjang."
+      "Biji kopi langka dengan aroma nangka yang khas dan aftertaste yang panjang.",
+      "Cita rasa unik dengan tingkat keasaman segar khas buah jeruk sitrus dan aroma bunga.",
+      "Karakter nutty dan karamel yang manis dengan sentuhan akhir rasa cokelat pekat.",
+      "Kopi organik dengan body yang lembut, aroma herbal, dan nyaris tanpa rasa pahit berlebih.",
+      "Kopi legendaris dari tanah Jawa dengan profil rasa manis, floral, dan fruity.",
+      "Berkarakter earthy dan rempah yang kuat, mencerminkan kompleksitas kopi klasik Sumatera.",
+      "Robusta unggulan dengan jejak rasa tembakau ringan, sangat cocok untuk tubruk.",
+      "Body yang tebal dengan kombinasi rasa dark chocolate, rempah, dan tingkat keasaman rendah."
+    ];
+      
+    const variasiGambar = [
+      "./images/arabica-mandailing.jpg",
+      "./images/robusta-sidikalang.jpg",
+      "./images/arabica-gayo.jpg",
+      "./images/house-blend.jpg",
+      "./images/liberica-peaberry.jpg",
+      "./images/arabica-bali-kintamani.jpg",
+      "./images/arabica-flores-bajawa.jpg",
+      "./images/arabica-papua-wamena.jpg",
+      "./images/arabica-java-preanger.jpg",
+      "./images/arabica-sumatra-lintong.jpg",
+      "./images/robusta-temanggung.jpg",
+      "./images/arabica-toraja-kalosi.jpg"
     ];
 
     for(let i = 0; i < 12; i++) {
       const namaProduk = variasiNama[i % variasiNama.length];
       const deskripsi = variasiDeskripsi[i % variasiDeskripsi.length];
       
-      const urlGambar = `https://picsum.photos/seed/bijikopi${i}/400/300`;
+      const urlGambar = variasiGambar[i % variasiGambar.length];
       const harga = 75 + (i * 5);
       
       kumpulanKartu += `
